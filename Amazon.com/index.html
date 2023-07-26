@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/bcfea92d2e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link type="javascript-file" href="main.js">
+
+
+    <script src="main.js"></script>
+    <title>Online shoppping app</title>
+</head>
+
+<body>
+    <nav class="nav-belt" id="header">
+        <div class="nav-left">
+            <a href="index.html"><img class="logo-img" src="../Amazon.com/Images/amazon-logo.png" alt="Main_logo"></a>
+            <div class="location-selector">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="hello">Hello</span><br>
+                <span class="address"><b>Select your address</b></span>
+            </div>
+        </div>
+        <div class="searchbar">
+            <div class="nav-option">
+                <select class="opt">
+                    <option>All</option>
+                    <option>All</option>
+                    <option>All</option>
+                    <option>All</option>
+                </select>
+            </div>
+            <div class="main-box">
+                <input id="srch" class="search-box" type="text" placeholder="Search Amazon.in">
+            </div>
+            <div class="btn-search">
+                <button class="btn-m"><i class="fa fa-search fa-lg"></i></button>
+            </div>
+            <div class="main_sec">
+                <img src="../Amazon.com/Images/Flag-India.jpg" alt="india-flag" width="21px" height="14px"
+                    style="border-radius: 3px; margin-left: 0px; padding: 14px;">
+                <div class="ind">EN</div>
+                <div class="select-orgin">
+                    <select class="select-c">
+                        <option>India</option>
+                        <option>India</option>
+                        <option>India</option>
+                        <option>India</option>
+                        <option>India</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sign-in">
+                <span id="hel">Hello,sign in</span><br>
+                <span class="acc_L"><b>Account & List</b></span>
+            </div>
+            <div class="sign-in">
+                <span id="hel">Return</span><br>
+                <span class="acc_L"><b>& Orders</b></span>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="Cart_Txt"><b>Cart</b></span>
+
+            </div>
+
+    </nav>
+
+    <nav class="nav2">
+        <div class="sidebar-nav-link">
+            <i class="fa-solid fa-bars"></i>
+            <span class="bar-txt"><b>All</b></span>
+        </div>
+        <div class="sidebar-nav-link1">
+            <span class="bar-txt"><b>Amazon MiniTV</b></span>
+        </div>
+        <div class="sidebar-nav-link2">
+            <span class="bar-txt"><b>Best Sellers</b></span>
+        </div>
+        <div class="sidebar-nav-link3">
+            <span class="bar-txt"><b>Todays Deal</b></span>
+        </div>
+        <div class="sidebar-nav-link4">
+            <span class="bar-txt"><b>Mobiles</b></span>
+        </div>
+        <div class="sidebar-nav-link5">
+            <span class="bar-txt"><b>New Releases</b></span>
+        </div>
+        <div class="sidebar-nav-link6">
+            <span class="bar-txt"><b>Customer Service</b></span>
+        </div>
+        <div class="sidebar-nav-link7">
+            <span class="bar-txt"><b>Prime</b></span>
+        </div>
+        <div class="sidebar-nav-link8">
+            <img src="../Amazon.com/Images/banner_offer.jpg">
+        </div>
+
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn1.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn2.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn3.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn4.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn5.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn6.jpg" width="100%">
+        </div>
+        <div class="mySlides fade">
+            <img class="slides" src="../Amazon.com/Images/bn7.jpg" width="100%">
+        </div>
+        <a class="prev" onclick="pluseSlides(-1)"><img src="../Amazon.com/Images/left-arrow.png" width="50px"></a>
+        <a class="next" onclick="pluseSlides(1)"><img src="../Amazon.com/Images/right-arrow.png" width="50px"></a>
+
+    </div>
+
+    <div class="shopnow">
+        <div class="div1"></div>
+        <div class="div1"></div>
+        <div class="div1"></div>
+        <div class="div1"></div>
+</div>
+
+<div class="shopnow">
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+</div>
+
+</body>
+
+<script>
+    // JavaScript to handle the slider functionality
+    document.addEventListener("DOMContentLoaded", function () {
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            let prevButton = document.querySelector(".prev");
+            let nextButton = document.querySelector(".next");
+
+            // Reset all slides to be hidden
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Ensure slideIndex stays within valid bounds
+            slideIndex = (slideIndex + slides.length) % slides.length;
+
+            // Show the current slide
+            slides[slideIndex].style.display = "block";
+
+            // Previous button click handler
+            prevButton.addEventListener("click", function () {
+                slideIndex--;
+                showSlides();
+            });
+
+            // Next button click handler
+            nextButton.addEventListener("click", function () {
+                slideIndex++;
+                showSlides();
+            });
+        }
+    });
+
+</script>
+
+</html>
